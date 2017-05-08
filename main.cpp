@@ -9,12 +9,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <CL/cl.h>
 #include <iostream>
 #include <string.h>
 #include <string>
 #include "helper.hpp"
-#include "helper.cpp"
+#include "helper.hpp"
 
 using namespace std;
 
@@ -43,6 +42,7 @@ int runCL(float *a, float *b, float *ans, int n)
 	assert(err == CL_SUCCESS);
 
 	cout << "Number of platforms: " << platforms_size << '\n';
+
 //Device Information
 
 	//Find the CPU CL device, as a fallback
